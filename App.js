@@ -1,29 +1,24 @@
-/**
- * <div id : "Parent">
- *    <div id: "child">
- *       <h1>i'm h1 tag</h1>
- *      <h2> i'm h2 tag </h2>
- *    </div>
- * <div id: "child">
- *       <h1>i'm h1 tag</h1>
- *      <h2> i'm h2 tag </h2>
- *    </div>
- * </div>
- */
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-// React.createElemte is a object => ReactDOM is render the object converts to html in to the browser
+const Title = ()=> (
+    <h1 className="head">
+     Welcome to JSX using react
+    </h1>
+);
 
-const parent = React.createElement("div", { id: "parent" }, 
-    [React.createElement("div", { id: "child" }, 
-        [React.createElement("h1", {}, "I am h1 tag"), React.createElement("h2", {}, "I am h2 tag")]),
-        React.createElement("div", { id: "child2" }, 
-        [React.createElement("h1", {}, "I am h1 tag"), React.createElement("h2", {}, "I am h2 tag")])]);
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+      {Title()}
+      <h1 className="heading">
+        Welcome to the Functional Component in to React
+      </h1>
+    </div>
+  );
+};
 
-
-// const heading = React.createElement("h1", { id: "heading" }, "Hello world welcome to React"); // React.creteElement is object
-
-console.log(parent);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(<HeadingComponent />);
