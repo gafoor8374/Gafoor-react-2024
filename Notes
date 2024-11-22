@@ -1,7 +1,9 @@
-Episode 1: 
+Episode 1:
 
 index.html
+
  <!-- Using javascript -->
+
     <!-- <script>
         const heading = document.createElement("h1");
         heading.innerHTML = "Hello World! welcome to the javascript.";
@@ -20,33 +22,33 @@ commands
 
 - npm init
 - npm i -D parcel
-- npm i react 
+- npm i react
 - npm i reactdom
-- npx parcel index.html - start server add script in package.json 
+- npx parcel index.html - start server add script in package.json
 - npx parcel build index.html - production build in dist floder add script in package.json
 - npx parcel build index.html then we remove the "main: app.js"in package.json it will be relocate the index.html start point
 
-/**
- * <div id : "Parent">
- *    <div id: "child">
- *       <h1>i'm h1 tag</h1>
- *      <h2> i'm h2 tag </h2>
- *    </div>
- * <div id: "child">
- *       <h1>i'm h1 tag</h1>
- *      <h2> i'm h2 tag </h2>
- *    </div>
- * </div>
- */
+/\*\*
+
+- <div id : "Parent">
+- <div id: "child">
+-       <h1>i'm h1 tag</h1>
+-      <h2> i'm h2 tag </h2>
+- </div>
+- <div id: "child">
+-       <h1>i'm h1 tag</h1>
+-      <h2> i'm h2 tag </h2>
+- </div>
+- </div>
+  */
 
 // React.createElemte is a object => ReactDOM is render the object converts to html in to the browser
 
 const parent = React.createElement("div", { id: "parent" },
-    [React.createElement("div", { id: "child" },
-        [React.createElement("h1", {}, "Gafoor Shaik"), React.createElement("h2", {}, "Shaik Gafoor")]),
-    React.createElement("div", { id: "child2" },
-        [React.createElement("h1", {}, "I am h1 tag"), React.createElement("h2", {}, "I am h2 tag")])]);
-
+[React.createElement("div", { id: "child" },
+[React.createElement("h1", {}, "Gafoor Shaik"), React.createElement("h2", {}, "Shaik Gafoor")]),
+React.createElement("div", { id: "child2" },
+[React.createElement("h1", {}, "I am h1 tag"), React.createElement("h2", {}, "I am h2 tag")])]);
 
 // const heading = React.createElement("h1", { id: "heading" }, "Hello world welcome to React"); // React.creteElement is object
 
@@ -57,9 +59,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent);
 
 Episode 3:
-- After confirgured npx parcel index.html in package.json then run command will be change  npx parcel index.html to "npm run start" or "npm start".
 
-- React element => 
+- After confirgured npx parcel index.html in package.json then run command will be change npx parcel index.html to "npm run start" or "npm start".
+
+- React element =>
 - It is JS object => render then it will be convert into HTMLElemnt.
 - const heading = React.createElement{"h1",{attiributes},"Namsthe React"}
 - console.log(heading);
@@ -67,11 +70,11 @@ Episode 3:
 - root.render(heading); => converts to HTMLelement push the browser rendering the root div replace the root div.
 
 - JSX: => is not HTML in JS, it is HTML like or XML like syntax
- -- JSX => React.createElement => ReactElement JS object => HTMLElement(render) --
-1.JSX make life easy devleopers
-2.JSX and React is different.
-3.It is understand for ECMA script ES6
-4.transplied before it reches the JS => PARCEL => Babel
+  -- JSX => React.createElement => ReactElement JS object => HTMLElement(render) --
+  1.JSX make life easy devleopers
+  2.JSX and React is different.
+  3.It is understand for ECMA script ES6
+  4.transplied before it reches the JS => PARCEL => Babel
 
 - const jsxheading = <h1 id="heading">Welcome to JSX using react</h1>;
 - console.log(jsxheading);
@@ -84,30 +87,30 @@ Episode 3:
 - 1. class Based Component - OLD
 - 2. Functional Based Component- NEW
 
-
 Functional Based Component:-
+
 - it is normal JS, it's return some JSX code.
-EX:- const headComponent = () => {
-    return <h1>welcome to  functional react componennt </h1>;
-}
+  EX:- const headComponent = () => {
+  return <h1>welcome to functional react componennt </h1>;
+  }
 
 - const fn = () => true;
 - cons fn2 = () => {
-    return true;
-}  
+  return true;
+  }
 
 //React Element
 const heading = (
-    <h1 className="head">
-     Welcome to JSX using react
-    </h1>
+<h1 className="head">
+Welcome to JSX using react
+</h1>
 );
 
 // Functional component
 
 - const HeadingComponent = () => {
-    return <h1 className="heading">Welcome to the Functional Component in to React</h1>
-}
+  return <h1 className="heading">Welcome to the Functional Component in to React</h1>
+  }
 
 functional component render like this
 EX: root.render(<HeadingComponent />)
@@ -115,44 +118,44 @@ EX: root.render(<HeadingComponent />)
 // Component Composition => put in one component into another component
 EX:-
 const Title = () => (
-    <h1 className="head">
-     Welcome to JSX using react
-    </h1>
+<h1 className="head">
+Welcome to JSX using react
+</h1>
 );
 
 const HeadingComponent = () => {
-  return (
-    <div id="container">
-      <Title /> or <Title></Title> or {Title()}
-      <h1 className="heading">
-        Welcome to the Functional Component in to React
-      </h1>
-    </div>
-  );
+return (
+<div id="container">
+<Title /> or <Title></Title> or {Title()}
+<h1 className="heading">
+Welcome to the Functional Component in to React
+</h1>
+</div>
+);
 };
 
 - Any JS combine to gether in JSX code in {}, react element
-EX:-
-//React Element
-const heading = (
-    <h1 className="head">
-     Welcome to JSX using react
-    </h1>
-);
+  EX:-
+  //React Element
+  const heading = (
+  <h1 className="head">
+  Welcome to JSX using react
+  </h1>
+  );
 
 const number = 10;
 
 const HeadingComponent = () => {
-  return (
-    <div id="container">
-      {title}
-      {number} // JS code
-      <h2>{number}</h2>
-      <h1 className="heading">
-        Welcome to the Functional Component in to React
-      </h1>
-    </div>
-  );
+return (
+<div id="container">
+{title}
+{number} // JS code
+<h2>{number}</h2>
+<h1 className="heading">
+Welcome to the Functional Component in to React
+</h1>
+</div>
+);
 };
 
 element under another element:
@@ -160,11 +163,76 @@ EX:-
 const ele = <span>welcome element</span>
 
 const heading = (
-    <h1 className="head">
-    {ele}
-     Welcome to JSX using react
-    </h1>
+<h1 className="head">
+{ele}
+Welcome to JSX using react
+</h1>
 );
 
+-->Episode 4-->
+/\*\*
+const Title = ()=> (
+<h1 className="head">
+Welcome to JSX using react
+</h1>
+);
 
+const HeadingComponent = () => {
+return (
+<div id="container">
+{Title()}
+<h1 className="heading">
+Welcome to the Functional Component in to React
+</h1>
+</div>
+);
+};
+\*/
+
+-- Food ordering app
+planing
+/\*\*
+
+- Header
+- - Logo
+- - Nav Items
+- Body
+- - search
+- - RestruantContainer
+- - RestaurantCard
+- footer
+- - CopyRight
+- - Links
+- - Address
+- - Contact
+    \*/
+
+--props--
+passing a arugument the function it's props.
+
+EX:
+-//console.log(props);
+//const {resName, cuisine} = props;
+
+- const restarunatCard = (props) or destructing ({resName,cuisine}) =>{
+  <h1>{props.resName}</h1>
+  }
+
+<RestaurantCard resName ="Meghana Food" cuisine="Briyani,South Indian, Asian"/>
+<RestaurantCard resName ="KFC" cuisine="Bruger"/>
+
+--key--
+newly added in list first place we should use key
+
+react not accepted using key as index
+
+{/_ <RestaurantCard resData={resList[0]}/>
+<RestaurantCard resData={resList[1]}/>
+<RestaurantCard resData={resList[2]}/>
+<RestaurantCard resData={resList[3]}/> _/}
+
+{/* {looping the restraunt using map function using key} */}
+{resList.map((restaruant) => (
+<RestaurantCard key={restaruant.info.id}resData={restaruant} />
+))}
 
