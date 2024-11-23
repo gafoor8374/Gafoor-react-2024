@@ -25,3 +25,9 @@ git push -u origin master
 - HTTPs
 - Tree Shaking - Remove unused code 
 - different dev and pre bundles
+
+# React Hooks
+- Hooks is normal JS utility function
+ # important Hooks
+  1. useState() - state variable in react
+  2. useEffect()

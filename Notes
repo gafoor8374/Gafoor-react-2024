@@ -236,3 +236,42 @@ react not accepted using key as index
 <RestaurantCard key={restaruant.info.id}resData={restaruant} />
 ))}
 
+
+-- Episode:5 --
+- create a 'src' folder in root level 
+- Make seperate component for ever component in src folder to avoid to much nesting
+- creating a components capital latter first.
+- seperate the components then first 'export' after 'import' that component
+- EX: export default Header:
+      import Header from 'location of the file'
+
+- Never place into the hard coded data into the componenet files
+- hard coded data keep another folder like 
+'utils etc'
+EX:- hard code data means
+    1. reslist, logo url,
+
+EXPORT and IMPORT is two types
+ 1. Deafult export/import 
+ EX: export default componet;
+ EX: import component from "path";
+ 2. Named export/import:
+ - In single file multiple then we use named export 
+ EX: export const header; 
+ EX: import the named files like EX: import {header,url} from "./loaction file"
+
+ # React Hooks
+- Hooks is normal JS utility function
+ # important Hooks
+  1. useState() - state variable in react
+  2. useEffect()
+
+# usseState()
+ - const [list, setList] = useState();
+
+ - useState is 
+
+ - when state variable update UI is re-render automatically
+
+ # Reconciliation Algorithm(React fiber)
+ - Virutal Dom is a representation of actual DOM
