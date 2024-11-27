@@ -275,3 +275,37 @@ EXPORT and IMPORT is two types
 
  # Reconciliation Algorithm(React fiber)
  - Virutal Dom is a representation of actual DOM
+
+
+ # Episode:6
+
+  ## Monolith : 
+    - Here the hole code in one project
+  ## MicroServices
+   - Single repesonive project.
+   - Here sepereate the services abd combine the all in one project.
+
+   EX: Back.End <=> UI <=> Auth <=> DB <=> sms <=>  like  connect to each other
+
+- They are two approaches to fetech the data to BACK END.
+ 1. Pageload --> API(500ms)--> Render
+ 2. Pageload --> Render --> API --> RE-Render
+
+### useEffect ###
+- useEffect() paasing through the two arruguments
+ 1. callback function it is arrow funciton. After render the componnet callback fucntion is called.
+ 2. dependices array.
+ - fetching data throught the useEffect.
+
+ # EX: useEffect(()=>{},[])
+
+ ## Shimmer UI ##
+ - Using fex cards for using UI render time.
+
+ ## Conditional Rendering
+- It is render through the condition then it;s  called Conditional rendering
+EX: f(resturantList.length === 0){
+    return  <Shimmer /> //<h1>Loading......</h1> //using make fake shimmer ui
+ }
+
+## useState()

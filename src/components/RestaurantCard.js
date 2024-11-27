@@ -4,11 +4,11 @@ const RestaurantCard = (props) =>{
     // console.log(props);
     //const {resName, cuisine} = props;
     const {resData} = props;
-    const deliveryTime = resData.info.sla.deliveryTime;
+    // const deliveryTime = resData.info.sla.deliveryTime;
     // console.log(deliveryTime);
 
     //distruing
-    const { cloudinaryImageId, name, cuisines, avgRating, costForTwo}  =
+    const { cloudinaryImageId, name, cuisines, avgRating, costForTwo,sla}  =
       resData?.info;
 
     return(
@@ -21,7 +21,7 @@ const RestaurantCard = (props) =>{
         <h4>{cuisines.join(", ")}</h4>
         <h4>{avgRating}</h4>
         <h4>{costForTwo}</h4>
-        <h4>{deliveryTime} minutes</h4>
+        <h4>{sla?.slaString} </h4>
      </div>   
     );
 };
