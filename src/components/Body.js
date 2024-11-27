@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
-// import resList from "../utils/mockData"; after using live API we  canno use mockdata.
+// import resList from "../utils/mockData"; after using live API we  cannot use mockdata.
 
 const Body = () => {
   const [resturantList, setResturantList] = useState([]);
@@ -16,7 +16,7 @@ const Body = () => {
   // using fetch method call a API by js engine usig async and await
   const fetchData = async () => {
     const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
