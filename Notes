@@ -309,3 +309,21 @@ EX: f(resturantList.length === 0){
  }
 
 ## useState()
+
+
+## Episode 7 ##
+
+ # useEffect()
+ - useEffect called everytime component render useeffect is render.
+ - If no dependency array useEffect is called on evey render.
+ - If depedency aaray is empty =>[] =>useEffect is called on intital render just once.
+ -If dependency array is placed called everytime depedency changed.
+
+ # useState()
+  - Never create a out side of the functional component only called inside of the functional component.
+
+  ## ROUTING ##
+   react router 
+   - npm i react-router-dom
+   1. createBrowserRouter,RouterProvider import
+   2. handle a router path,element,errorElement
